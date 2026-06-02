@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>AI Resume Analyzer</h1>
+
+        <p class="subtitle">
+            Upload your resume and receive AI-powered feedback,
+            ATS analysis, and improvement suggestions.
+        </p>
+
+        <div class="upload-box">
+
+            <input type="file"
+                   id="resumeFile"
+                   accept=".pdf,.doc,.docx"
+                   hidden>
+
+            <label for="resumeFile" class="upload-btn">
+                Choose Resume
+            </label>
+
+            <p id="fileName">
+                No file selected
+            </p>
+
+        </div>
+
+        <button id="analyzeBtn">
+            Analyze Resume
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
