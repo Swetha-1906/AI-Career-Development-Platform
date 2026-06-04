@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#eaf6ff;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* MAIN CONTAINER */
+.container{
+    width:750px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* TITLE */
+h1{
+    text-align:center;
+    color:#0077b6;
+}
+
+.subtitle{
+    text-align:center;
+    color:#555;
+    margin-bottom:20px;
+}
+
+/* TOP BAR */
+.top-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+/* BUTTON */
+button{
+    padding:10px 15px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:14px;
+    color:white;
+}
+
+/* NEW QUESTION BUTTON */
+#questionBtn{
+    background:#64b5f6;
+}
+
+#questionBtn:hover{
+    background:#42a5f5;
+}
+
+/* GRID LAYOUT */
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+/* CARDS */
+.card{
+    background:#f7fbff;
+    border:2px solid #90caf9;
+    padding:15px;
+    border-radius:12px;
+}
+
+/* TEXTAREA */
+textarea{
+    width:100%;
+    height:140px;
+    margin-top:10px;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #90caf9;
+    outline:none;
+    resize:none;
+}
+
+/* SUBMIT BUTTON */
+#evaluateBtn{
+    margin-top:10px;
+    width:100%;
+    background:#0288d1;
+}
+
+#evaluateBtn:hover{
+    background:#0277bd;
+}
+
+/* FEEDBACK */
+.feedback{
+    margin-top:15px;
+}
+
+/* SCORE BADGE */
+.badge{
+    background:#0288d1;
+    color:white;
+    padding:8px 12px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+/* QUESTION TEXT */
+#questionBox{
+    font-size:15px;
+    color:#333;
+    line-height:1.5;
+}
+
+/* RESULT TEXT */
+#resultBox{
+    white-space:pre-line;
+    color:#333;
+}
