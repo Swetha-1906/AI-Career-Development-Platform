@@ -155,13 +155,13 @@ async function analyzeResume() {
 
     interviewBtn.onclick = () => {
         if (atsScore >= 70) {
-            window.location.href = "interview.html";
+            window.location.href = "../../interview-trainer/frontend/index.html";
         }
     };
 
     careerBtn.onclick = () => {
         if (atsScore < 70) {
-            window.location.href = "career-guidance.html";
+             window.location.href ="../../career-advisor/frontend/index.html";
         }
     };
 
