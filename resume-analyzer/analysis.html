@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Resume Analysis</title>
+
+<style>
+
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+}
+
+
+h1 {
+    text-align: center;
+    color: #1d4ed8;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 25px;
+}
+
+
+.loader {
+    text-align: center;
+    margin-top: 60px;
+    color: #1d4ed8;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
+.score-box {
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+    color: white;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(37,99,235,0.3);
+}
+
+.score-box h2 {
+    font-size: 60px;
+    margin: 0;
+}
+
+.score-box p {
+    margin: 5px 0 0;
+    opacity: 0.9;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+
+.card {
+    background: white;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+
+.card h3 {
+    color: #1d4ed8;
+    margin-bottom: 12px;
+    font-size: 16px;
+    border-left: 4px solid #2563eb;
+    padding-left: 8px;
+}
+
+
+ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 6px;
+    color: #374151;
+    font-size: 14px;
+}
+
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: #dbeafe;
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #1d4ed8;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>AI Resume Intelligence </h1>
+    <p class="subtitle">ATS Score • Skill Analysis • Role Matching • AI Insights</p>
+
+    <div class="loader" id="loader">
+        Analyzing Resume with AI...
+    </div>
+
+    <div id="result" style="display:none;">
+
+        <!-- SCORE -->
+        <div class="score-box">
+            <h2 id="atsScore">0</h2>
+            <p>ATS SCORE</p>
+        </div>
+
+        <!-- GRID -->
+        <div class="grid">
+
+            <div class="card">
+                <h3>ATS Breakdown</h3>
+                <div id="atsBreakdown"></div>
+            </div>
+
+            <div class="card">
+                <h3>Technical Skills</h3>
+                <div id="skills"></div>
+            </div>
+
+            <div class="card">
+                <h3>Strengths</h3>
+                <div id="strengths"></div>
+            </div>
+
+            <div class="card">
+                <h3>Missing Skills</h3>
+                <div id="missing"></div>
+            </div>
+
+            <div class="card">
+                <h3>Project Analysis</h3>
+                <div id="projects"></div>
+            </div>
+
+            <div class="card">
+                <h3>Role Match</h3>
+                <div id="roleMatch"></div>
+            </div>
+
+            <div class="card">
+            <h3>Interview Eligibility</h3>
+
+           <div id="interview"></div>
+
+            <br>
+
+        <button id="interviewBtn"
+        style="
+            width:100%;
+            padding:10px;
+            background:#2563eb;
+            color:white;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            font-weight:600;">
+        Attend Interview
+        </button>
+
+        <button id="careerBtn"
+            style="
+                width:100%;
+                padding:10px;
+              background:#16a34a;
+                 color:white;
+                  border:none;
+                  border-radius:8px;
+                     cursor:pointer;
+                  margin-top:10px;
+                  font-weight:600;">
+               Get Career Guidance
+          </button>
+          </div>
+
+            <div class="card">
+                <h3>Suggestions</h3>
+                <div id="suggestions"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="analysis.js"></script>
+
+</body>
+
+</html>

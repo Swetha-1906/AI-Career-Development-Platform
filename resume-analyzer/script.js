@@ -1,30 +1,35 @@
-const resumeFile =
-document.getElementById("resumeFile");
-
-const fileName =
-document.getElementById("fileName");
-
-const analyzeBtn =
-document.getElementById("analyzeBtn");
+const form = document.getElementById("uploadForm");
+const resumeFile = document.getElementById("resumeFile");
+const fileName = document.getElementById("fileName");
 
 resumeFile.addEventListener("change", () => {
-
-    if(resumeFile.files.length > 0)
-    {
-        fileName.textContent =
-        resumeFile.files[0].name;
-    }
-
+    fileName.textContent = resumeFile.files[0]?.name || "No file selected";
 });
 
-analyzeBtn.addEventListener("click", () => {
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-    if(resumeFile.files.length === 0)
-    {
-        alert("Please upload a resume.");
+    const name = document.getElementById("name").value;
+    const role = document.getElementById("role").value;
+
+    if (!resumeFile.files.length) {
+        alert("Select resume");
         return;
     }
 
-    alert("Resume Uploaded Successfully!");
+    const formData = new FormData();
+    formData.append("resume", resumeFile.files[0]);
 
+    await fetch("http://localhost:3000/upload", {
+        method: "POST",
+        body: formData
+    });
+
+    await fetch("http://localhost:3000/setUser", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, role })
+    });
+
+    window.location.href = "analysis.html";
 });
