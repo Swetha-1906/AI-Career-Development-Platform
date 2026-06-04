@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Interview Practice | Smart Interview Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell interview-shell">
+    <section class="two-column-layout">
+      <aside class="left-card">
+        <div class="card-header">
+          <p class="eyebrow">AI-Interview Trainer</p>
+          <h1>Start your interview</h1>
+        </div>
+        <form id="mainForm" class="compact-form">
+          <label>
+            Full Name
+            <input type="text" id="userName" placeholder="Enter your name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" id="userEmail" placeholder="you@example.com" required>
+          </label>
+          <label>
+            Language / Domain
+            <select id="domainSelect">
+              <option>Java</option>
+              <option>Python</option>
+              <option>DBMS</option>
+              <option>OS</option>
+              <option>CS Basics</option>
+            </select>
+          </label>
+          <label>
+            Difficulty
+            <div class="button-group">
+              <button type="button" class="pill selected" data-value="Easy">Easy</button>
+              <button type="button" class="pill" data-value="Medium">Medium</button>
+              <button type="button" class="pill" data-value="Hard">Hard</button>
+            </div>
+            <input type="hidden" id="difficultyInput" value="Easy">
+          </label>
+          <label>
+            Mode
+            <select id="modeSelect">
+              <option>Practice</option>
+              <option>Mock Interview</option>
+            </select>
+          </label>
+          <button type="submit" class="button primary-btn full-width">Evaluate Answers</button>
+        </form>
+      </aside>
+      <main class="right-card">
+        <div class="card-header">
+          <p class="eyebrow">Interview Questions</p>
+          <p class="card-copy">Five Java Easy practice questions are shown by default. Change the language or difficulty to update the questions.</p>
+        </div>
+        <div id="timerBanner" class="timer-banner hidden">
+          <span class="timer-label">Mock interview timer</span>
+          <strong id="timerDisplay" class="timer-display">03:00</strong>
+        </div>
+        <div id="questionGrid" class="question-grid"></div>
+      </main>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

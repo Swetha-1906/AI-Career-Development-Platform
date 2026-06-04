@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interview Report | Smart Interview Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell result-shell">
+    <header class="report-header">
+      <div>
+        <p class="eyebrow">Interview Report</p>
+        <h1>Your session results</h1>
+        <p class="hero-copy">Review scores, weaknesses, and improvement guidance from AI-style feedback.</p>
+      </div>
+      <button class="button secondary-btn" id="restartInterviewBtn">Continue Interview</button>
+    </header>
+
+    <section class="result-grid">
+      <article class="result-card">
+        <h2>Overall Summary</h2>
+        <div class="final-score" id="finalScore">--</div>
+        <div class="score-breakdown">
+          <div><strong>Total Questions</strong><span id="totalQuestions">--</span></div>
+          <div><strong>Average Score</strong><span id="averageScore">--</span></div>
+          <div><strong>Weak Topics</strong><span id="summaryWeakTopics">--</span></div>
+        </div>
+      </article>
+      <article class="result-card">
+        <h2>Evaluation Results</h2>
+        <div id="resultFeedback" class="result-content"></div>
+      </article>
+    </section>
+
+    <section class="improve-section">
+      <h2>Weaknesses to Improve</h2>
+      <div id="weakAreas" class="weak-list">No weak areas detected yet.</div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
