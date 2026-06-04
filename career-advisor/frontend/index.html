@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Career Advisor</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!-- LEFT SIDE -->
+
+        <div class="form-container">
+
+            <h1>AI Career Advisor</h1>
+
+            <p class="subtitle">
+                Discover the best career path based on your skills,
+                interests and future goals.
+            </p>
+
+            <form id="careerForm">
+
+                <input type="text"
+                       id="name"
+                       placeholder="Enter your name"
+                       required>
+
+                <input type="text"
+                       id="degree"
+                       placeholder="Degree"
+                       required>
+
+                <input type="text"
+                       id="branch"
+                       placeholder="Branch"
+                       required>
+
+                <input type="text"
+                       id="interests"
+                       placeholder="Interests (AI, Web Development)"
+                       required>
+
+                <input type="text"
+                       id="skills"
+                       placeholder="Known Skills (Python, HTML, CSS)"
+                       required>
+
+                <input type="text"
+                       id="goal"
+                       placeholder="Career Goal">
+
+                <button type="submit">
+                    Analyze Career
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="result-container">
+
+            <h2>Career Recommendations</h2>
+
+            <div id="careerResults">
+
+                <div class="empty-state">
+
+                    <h3>🚀 Career Insights</h3>
+
+                    <p>
+                        Fill out the form and click Analyze Career
+                        to receive personalized AI recommendations.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+    
+                <button id="nextPageBtn" class="next-btn">
+                    View Career Scores →
+                </button>
+
+                <button id="downloadPdfBtn" class="next-btn">
+                    Download PDF Report
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+     
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
